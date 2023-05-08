@@ -22,9 +22,25 @@ class CircleOfLife:
         if key == 'q':
             exit()
 
-    #def step_move(self):
+    def step_move(self):
+        print_TODO('step_move()')
+        for zebra in self.zebras:
+            print_TODO('get empty neighbor')
+            direction = 'left'
+            zebra.move(direction)
+        for lion in self.lions:
+            print_TODO('get neighboring zebra')
+            print_TODO('move to zebra if found, else move to empty')
+            print_TODO('get empty neighbor')
+            direction = 'left'
+            lion.move(direction)
 
-    #def step_breed(self):
+    def step_breed(self):
+        print_TODO('step_breed()')
+        for animal in self.zebras +self.lions:
+            print_TODO('get empty neighbor')
+            x, y = 0, 0
+            animal.breed(x, y)
     
     def run(self, num_timesteps=100):
         self.display()
